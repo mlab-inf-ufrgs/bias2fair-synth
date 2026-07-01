@@ -1,4 +1,4 @@
-# Bias2Fair Synth
+# From Bias to Fairness: Can Synthetic Data Bridge the Gap in Tabular Machine Learning?
 
 Evaluation of the impact of synthetic data on algorithmic bias mitigation in machine learning models [CatBoost, Logistic Regression, SVM], focusing on datasets [COMPAS, Adult, Diabetes 130-US Hospitals for Years 1999-2008] and generators [CTGAN, Gaussian Copula, TVAE, TabDDM].
 
@@ -10,13 +10,13 @@ The experiments are organized into six scenarios that allow isolating and compar
 
 ---
 
-### S1 — Original (baseline without intervention)
+### S1: Original (baseline without intervention)
 
 Training and evaluating models on the original data, without any mitigation pre-processing or synthetic data generation. Serves as a baseline for comparison with all other scenarios.
 
 ---
 
-### S2 — Pre-processing Mitigation
+### S2: Pre-processing Mitigation
 
 Application of three classic bias mitigation methods in the data pre-processing stage:
 
@@ -28,7 +28,7 @@ Application of three classic bias mitigation methods in the data pre-processing 
 
 ---
 
-### S3 — Synthetic Data on Entire Dataset
+### S3: Synthetic Data on Entire Dataset
 
 Synthetic data generation applied to the entire dataset, **without generation condition** and **without conditional mitigation intent**. Works as an experimental control to distinguish the data augmentation effect from any deliberate mitigation effect.
 
@@ -44,7 +44,7 @@ $$\alpha \in \{1.5,\ 2,\ 3\}$$
 
 ---
 
-### S4 — Synthetic Oversampling of Minority Groups
+### S4: Synthetic Oversampling of Minority Groups
 
 Synthetic data generation targeted at **minority groups**, based on the distributions of the majority group, aiming to **equalize proportions** between the sensitive attribute (race) and the outcome.
 
@@ -52,7 +52,7 @@ The intervention seeks to balance racial representation without altering the maj
 
 ---
 
-### S5 — Synthetic Data by Subgroup (outcome × race)
+### S5: Synthetic Data by Subgroup (outcome × race)
 
 Synthetic data generation **exclusively for the underrepresented group** in the outcome, using cross-separation between sensitive attribute and outcome:
 
@@ -67,7 +67,7 @@ For each combination, synthetic data is generated for the **underrepresented cla
 
 ---
 
-### S6 — Hybrid Mitigation (Pre-processing + Synthetic Data)
+### S6: Hybrid Mitigation (Pre-processing + Synthetic Data)
 
 Combination of the **Reweighing** pre-processing mitigation method with the synthetic generation strategy of **S5** (synthetic data focused on the underrepresented group in the outcome).
 
