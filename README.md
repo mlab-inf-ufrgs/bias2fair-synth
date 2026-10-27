@@ -133,3 +133,23 @@ python scripts/plots/plot_utility_metrics.py --dataset compas adult diabetes
 # You can also specify the reference scenario for the JSD evaluation
 python scripts/plots/plot_sdv_fidelity.py --dataset compas adult diabetes --scenario S3_2.0
 ```
+
+## Cite this work 🗞️
+
+```bibtex
+-- BibTeX
+@InProceedings{10.1007/978-3-032-39904-5_33,
+author="Mota, Mateus Balda
+and Recamonde-Mendoza, Mariana",
+editor="Recamonde-Mendoza, Mariana
+and Barros, Rodrigo C.",
+title="From Bias to Fairness: Can Synthetic Data Bridge the Gap in Tabular Machine Learning?",
+booktitle="Intelligent Systems",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="487--502",
+abstract="Synthetic data generation (SDG) is increasingly explored for bias mitigation in machine learning, yet its fairness implications, particularly in preserving or amplifying dependencies between protected attributes and targets, remain poorly characterized, especially in tabular domains. This systematic study evaluates SDG methods for fairness in tabular classification. We assess generative approaches (e.g., conditional GANs, VAEs, diffusion-based models) in isolation and combined with pre-processing techniques (reweighting). Evaluation spans diverse real-world datasets, multiple classifiers, and complementary performance and fairness metrics. Our key findings show that (1) synthetic data is not inherently fairness-aware--depending on how it is applied, it can either mitigate or exacerbate bias, even when high data fidelity is achieved.; (2) subgroup-targeted synthesis consistently outperforms naive full-data augmentation, which often amplifies bias; (3) a hybrid approach combining reweighting with subgroup-conditioned synthesis achieves strong fairness improvements with minimal utility loss, particularly in high-bias scenarios. These results demonstrate that fairness must be explicitly incorporated into the data generation process, providing practical guidance for responsible synthetic data deployment.",
+isbn="978-3-032-39904-5"
+}
+```
